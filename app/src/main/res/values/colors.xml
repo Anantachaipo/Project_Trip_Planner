@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <color name="orange">#FFA500</color>
+
+    <color name="colorPrimary">#1976D2</color>
+
+
+
+    <!-- Primary Blue Theme -->
+    <color name="blue_primary">#1976D2</color>  <!-- น้ำเงินหลัก -->
+    <color name="blue_dark">#0D47A1</color>  <!-- น้ำเงินเข้ม -->
+    <color name="blue_light">#42A5F5</color>  <!-- น้ำเงินอ่อน -->
+    <color name="blue_accent">#448AFF</color>  <!-- น้ำเงินสด -->
+
+    <!-- Neutral Colors -->
+    <color name="black">#000000</color> <!-- สีดำ -->
+    <color name="white">#FFFFFF</color> <!-- สีขาว -->
+    <color name="gray"> #BEBEBE</color> <!-- สีขาว -->
+    <color name="gray_light">#F5F5F5</color> <!-- สีเทาอ่อน -->
+    <color name="gray_medium">#BDBDBD</color> <!-- สีเทากลาง -->
+    <color name="gray_dark">#616161</color> <!-- สีเทาเข้ม -->
+
+    <!-- Status & Action Colors -->
+    <color name="underline">#D8D6D6</color>
+    <color name="deletecolor">#DD3124</color> <!-- สีแดง ลบ -->
+    <color name="archiveColor">#3AE015</color> <!-- สีเขียว เก็บถาวร -->
+
+    <!-- Pastel Colors -->
+    <color name="pastel_blue">#A7C7E7</color> <!-- ฟ้าอ่อน -->
+    <color name="pastel_green">#B4E1C5</color> <!-- เขียวอ่อน -->
+    <color name="pastel_pink">#FFC1CC</color> <!-- ชมพูอ่อน -->
+    <color name="pastel_yellow">#FFFACD</color> <!-- เหลืองอ่อน -->
+    <color name="pastel_purple">#D8BFD8</color> <!-- ม่วงอ่อน -->
+    <color name="pastel_orange">#FFDAB9</color> <!-- ส้มอ่อน -->
+
+    <color name="selected_color">#FF5722</color>  <!-- สีส้มเมื่อเลือก -->
+    <color name="unselected_color">#757575</color> <!-- สีเทาเมื่อไม่ได้เลือก -->
+
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#009688</color>
+
+    <color name="light_blue">#E3F2FD</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+
+</resources>

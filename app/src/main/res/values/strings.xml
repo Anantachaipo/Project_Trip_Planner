@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">Project_CB(new)</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="google_maps_key">AIzaSyArFeH3SFY8MUXxuoRjr4i-T5LQkn5j6qo</string>
+
+    <!-- ชื่อทริปท่องเที่ยวในประเทศไทย -->
+    <string name="trip_1">การสำรวจกรุงเทพฯ</string>
+    <string name="trip_2">การผจญภัยเชียงใหม่</string>
+    <string name="trip_3">ทริปพักผ่อนชายหาดพัทยา</string>
+    <string name="trip_4">ทริปเกาะกระบี่</string>
+    <string name="trip_5">ทัวร์ประวัติศาสตร์สุโขทัย</string>
+    <string name="trip_6">ท่องเที่ยวชมพระอาทิตย์ตกภูเก็ต</string>
+
+    <!-- รายละเอียดของแต่ละทริป -->
+    <string name="description_1">
+        สำรวจกรุงเทพฯ เมืองแห่งวัฒนธรรมที่มีสถานที่ท่องเที่ยวสำคัญ เช่น วัดพระแก้ว พระบรมมหาราชวัง และเดินเล่นที่ถนนข้าวสาร
+    </string>
+    <string name="description_2">
+        ผจญภัยในเชียงใหม่ สัมผัสธรรมชาติที่ดอยอินทนนท์ ชมวัดพระธาตุดอยสุเทพ และเพลิดเพลินกับวัฒนธรรมที่ตลาดไนท์บาซาร์
+    </string>
+    <string name="description_3">
+        พักผ่อนที่ชายหาดพัทยา เที่ยวเกาะล้าน สนุกกับกิจกรรมทางน้ำ และชมโชว์คาบาเร่ต์ที่มีชื่อเสียง
+    </string>
+    <string name="description_4">
+        ท่องเที่ยวเกาะกระบี่ สัมผัสความงดงามของทะเลแหวก ดำน้ำที่เกาะพีพี และชมวิวที่เกาะห้อง
+    </string>
+    <string name="description_5">
+        สัมผัสประวัติศาสตร์ไทยในสุโขทัย เยี่ยมชมอุทยานประวัติศาสตร์ วัดมหาธาตุ และวัดศรีชุม
+    </string>
+    <string name="description_6">
+        ชมพระอาทิตย์ตกที่แหลมพรหมเทพ สำรวจวัดฉลอง และพักผ่อนที่หาดป่าตองในภูเก็ต
+    </string>
+
+    <!-- จุดแวะของทริป 1 -->
+    <string-array name="trip_1_stops">
+        <item>วัดพระแก้ว</item>
+        <item>พระบรมมหาราชวัง</item>
+        <item>ถนนข้าวสาร</item>
+        <item>แม่น้ำเจ้าพระยา</item>
+        <item>ตลาดน้ำดำเนินสะดวก</item>
+        <item>เยาวราช</item>
+        <item>วัดอรุณ</item>
+        <item>ศาลหลักเมือง</item>
+        <item>พิพิธภัณฑสถานแห่งชาติ</item>
+        <item>จตุจักร</item>
+    </string-array>
+
+    <string-array name="trip_1_stop_descriptions">
+        <item>วัดที่สำคัญที่สุดของไทย มีพระแก้วมรกตประดิษฐาน</item>
+        <item>พระราชวังเก่าแก่ที่เคยเป็นที่ประทับของกษัตริย์</item>
+        <item>ถนนท่องเที่ยวที่มีชื่อเสียงด้านสถานบันเทิง</item>
+        <item>ล่องเรือชมวิวเมืองริมฝั่งแม่น้ำเจ้าพระยา</item>
+        <item>ตลาดน้ำเก่าแก่ที่นักท่องเที่ยวนิยมไปเยี่ยมชม</item>
+        <item>ย่านอาหารและวัฒนธรรมจีนในกรุงเทพฯ</item>
+        <item>วัดเก่าแก่ที่มีพระปรางค์งดงามริมแม่น้ำเจ้าพระยา</item>
+        <item>สถานที่สำคัญทางประวัติศาสตร์ไทย</item>
+        <item>พิพิธภัณฑ์ที่จัดแสดงโบราณวัตถุและประวัติศาสตร์ไทย</item>
+        <item>ตลาดนัดขนาดใหญ่ มีสินค้าหลากหลายให้เลือก</item>
+    </string-array>
+
+    <!-- จุดแวะของทริป 2 -->
+    <string-array name="trip_2_stops">
+        <item>ดอยสุเทพ</item>
+        <item>เชียงใหม่ไนท์ซาฟารี</item>
+        <item>ตลาดวโรรส</item>
+        <item>ถนนนิมมาน</item>
+        <item>วัดพระสิงห์</item>
+        <item>ไนท์บาซาร์</item>
+        <item>ม่อนแจ่ม</item>
+        <item>แม่กำปอง</item>
+        <item>สวนสัตว์เชียงใหม่</item>
+        <item>ดอยอินทนนท์</item>
+    </string-array>
+
+    <string-array name="trip_2_stop_descriptions">
+        <item>สถานที่ท่องเที่ยวสำคัญในเชียงใหม่</item>
+        <item>สวนสัตว์กลางคืนที่มีชื่อเสียง</item>
+        <item>ตลาดเก่าแก่ของเชียงใหม่</item>
+        <item>ถนนสุดฮิปสำหรับนักท่องเที่ยว</item>
+        <item>วัดเก่าแก่ที่มีสถาปัตยกรรมงดงาม</item>
+        <item>ศูนย์รวมของฝากเชียงใหม่</item>
+        <item>สถานที่ชมวิวธรรมชาติสวยงาม</item>
+        <item>หมู่บ้านเล็ก ๆ ในหุบเขา</item>
+        <item>สวนสัตว์ที่มีหมีแพนด้า</item>
+        <item>ยอดดอยสูงสุดของประเทศไทย</item>
+    </string-array>
+
+    <!-- จุดแวะของทริป 3 -->
+    <string-array name="trip_3_stops">
+        <item>หาดพัทยา</item>
+        <item>เกาะล้าน</item>
+        <item>ตลาดน้ำ 4 ภาค</item>
+        <item>อัลคาซ่าร์ คาบาเรต์</item>
+        <item>เขาพระตำหนัก</item>
+        <item>ปราสาทสัจธรรม</item>
+    </string-array>
+
+    <string-array name="trip_3_stop_descriptions">
+        <item>ชายหาดที่มีชื่อเสียงและเต็มไปด้วยกิจกรรม</item>
+        <item>เกาะสวยงามที่สามารถดำน้ำและพักผ่อนได้</item>
+        <item>ตลาดน้ำที่รวมวัฒนธรรม 4 ภาคของไทย</item>
+        <item>โชว์คาบาเรต์ที่มีชื่อเสียง</item>
+        <item>จุดชมวิวที่สามารถมองเห็นวิวเมืองพัทยา</item>
+        <item>สถาปัตยกรรมไม้แกะสลักที่งดงาม</item>
+    </string-array>
+
+    <!-- จุดแวะของทริป 4 -->
+    <string-array name="trip_4_stops">
+        <item>เกาะพีพี</item>
+        <item>เกาะห้อง</item>
+        <item>ทะเลแหวก</item>
+    </string-array>
+
+    <string-array name="trip_4_stop_descriptions">
+        <item>เกาะที่มีน้ำทะเลใสและธรรมชาติสวยงาม</item>
+        <item>เกาะที่เหมาะแก่การพายเรือและดำน้ำ</item>
+        <item>แหล่งท่องเที่ยวที่ทรายแหวกกลางทะเล</item>
+    </string-array>
+
+    <!-- จุดแวะของทริป 5 -->
+    <string-array name="trip_5_stops">
+        <item>อุทยานประวัติศาสตร์สุโขทัย</item>
+        <item>วัดมหาธาตุ</item>
+        <item>วัดศรีชุม</item>
+    </string-array>
+
+    <string-array name="trip_5_stop_descriptions">
+        <item>แหล่งโบราณสถานที่มีความสำคัญทางประวัติศาสตร์</item>
+        <item>วัดที่มีเจดีย์ทรงลังกาสวยงาม</item>
+        <item>วัดที่มีพระพูดได้ในตำนาน</item>
+    </string-array>
+
+    <!-- จุดแวะของทริป 6 -->
+    <string-array name="trip_6_stops">
+        <item>แหลมพรหมเทพ</item>
+        <item>หาดป่าตอง</item>
+        <item>วัดฉลอง</item>
+    </string-array>
+
+    <string-array name="trip_6_stop_descriptions">
+        <item>จุดชมพระอาทิตย์ตกที่สวยที่สุดในภูเก็ต</item>
+        <item>ชายหาดยอดนิยมของภูเก็ต</item>
+        <item>วัดเก่าแก่ที่สำคัญของภูเก็ต</item>
+    </string-array>
+
+</resources>

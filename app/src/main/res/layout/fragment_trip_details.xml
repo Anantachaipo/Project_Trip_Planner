@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- ปุ่มย้อนกลับ -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_left_arrow"
+            android:contentDescription="ย้อนกลับ"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- รูปภาพทริป (แนวนอน) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTripImages"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingStart="@dimen/back_button_size"
+            android:paddingEnd="12dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/btnBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ชื่อทริป -->
+        <TextView
+            android:id="@+id/tripTitleDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewTripImages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- รายละเอียดทริป -->
+        <TextView
+            android:id="@+id/tripDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Description of the trip..."
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tripTitleDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- ประเภททริป -->
+        <TextView
+            android:id="@+id/tripTypeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ประเภททริป"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:padding="6dp"
+            android:backgroundTint="@color/blue_accent"
+            android:background="@drawable/bg_trip_type_label"
+            app:layout_constraintTop_toBottomOf="@id/tripDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- วันที่เดินทาง -->
+        <EditText
+            android:id="@+id/tripDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="เลือกวันที่เดินทาง"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tripTypeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- จุดเริ่มต้น -->
+        <TextView
+            android:id="@+id/tripStartLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="จุดเริ่มต้น: -"
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tripDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Autocomplete จุดเริ่มต้น -->
+        <fragment
+            android:id="@+id/autocompleteStartLocation"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tripStartLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- จุดสิ้นสุด -->
+        <TextView
+            android:id="@+id/tripEndLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="จุดสิ้นสุด: -"
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/autocompleteStartLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Autocomplete จุดสิ้นสุด -->
+        <fragment
+            android:id="@+id/autocompleteEndLocation"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/tripEndLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+        <!-- เวลาออกเดินทาง -->
+        <EditText
+            android:id="@+id/etDepartureTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="เลือกเวลาออกเดินทาง"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/autocompleteEndLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <!-- เวลาออกเดินทาง -->
+        <TextView
+            android:id="@+id/tripDepartureTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="เวลาออกเดินทาง: -"
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/etDepartureTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+
+        <!-- วันที่เริ่ม -->
+        <TextView
+            android:id="@+id/tripStartDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="วันที่เริ่มเดินทาง: -"
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tripDepartureTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- ระยะทาง -->
+        <TextView
+            android:id="@+id/tripDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ระยะทาง: -"
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tripStartDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- ราคา -->
+        <TextView
+            android:id="@+id/tripPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ราคา: -"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tripDistance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- หัวข้อจุดแวะ -->
+        <TextView
+            android:id="@+id/stopHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="จุดแวะทั้งหมด"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tripPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewStops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/stopHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- ปุ่มจอง -->
+        <Button
+            android:id="@+id/btnBookTrip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="จองทริปนี้"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/blue_accent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewStops"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ปุ่มแก้ไข -->
+        <Button
+            android:id="@+id/btnEditTrip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="แก้ไขทริปนี้"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/gray"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/btnBookTrip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ปุ่มลบทริป -->
+        <Button
+            android:id="@+id/btnDeleteTrip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="🗑 ลบทริปนี้"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/btnEditTrip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

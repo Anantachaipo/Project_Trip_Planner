@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="รายละเอียดการจอง"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_centerInParent="true" />
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_left_arrow"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="ย้อนกลับ" />
+        </RelativeLayout>
+
+        <!-- Customer Info -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👤 ข้อมูลผู้จอง"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ชื่อผู้จอง"
+            android:textSize="14sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tvCustomerEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อีเมล"
+            android:textSize="14sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/tvCustomerTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เบอร์โทร"
+            android:textSize="14sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp" />
+
+        <!-- Booking Info -->
+        <TextView android:id="@+id/tvTripName" style="@style/InfoStyle" />
+        <TextView android:id="@+id/tvDateRange" style="@style/InfoStyle" />
+        <TextView android:id="@+id/tvStart" style="@style/InfoStyle" />
+        <TextView android:id="@+id/tvEnd" style="@style/InfoStyle" />
+        <TextView android:id="@+id/tvSeats" style="@style/InfoStyle" />
+        <TextView android:id="@+id/tvType" style="@style/InfoStyle" />
+        <TextView android:id="@+id/tvDistance" style="@style/InfoStyle" />
+        <TextView android:id="@+id/tvBookingStatus" style="@style/InfoStyle" />
+        <TextView android:id="@+id/tvNote" style="@style/InfoStyle" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnApprove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅ อนุมัติ"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnReject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ ปฏิเสธ" />
+        </LinearLayout>
+
+        <!-- Assign Driver -->
+        <Button
+            android:id="@+id/btnAssignDriver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚐 มอบหมายคนขับ"
+            android:visibility="gone"
+            android:layout_marginTop="12dp" />
+
+        <!-- Overview -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTripOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

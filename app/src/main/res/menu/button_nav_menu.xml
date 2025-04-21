@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/home"
+        android:id="@+id/home"
+        android:title="Home" />
+    <item
+        android:icon="@drawable/road_trip"
+        android:id="@+id/trip"
+        android:title="Trip Booking" />
+    <item
+        android:icon="@drawable/open_book"
+        android:id="@+id/allBooking"
+        android:title="My Book"/>
+    <item
+        android:icon="@drawable/ic_settings"
+        android:id="@+id/setting"
+        android:title="Setiing"/>
+</menu>

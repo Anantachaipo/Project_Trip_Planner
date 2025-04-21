@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"> <!-- ✅ เพิ่มตรงนี้ -->
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="ออกจากระบบ"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always" /> <!-- ✅ เปลี่ยนจาก android:showAsAction -->
+</menu>

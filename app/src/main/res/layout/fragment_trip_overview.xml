@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 📝 ชื่อทริป -->
+        <EditText
+            android:id="@+id/etTripTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ชื่อทริป"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text" />
+
+        <!-- 📘 คำอธิบาย -->
+        <EditText
+            android:id="@+id/etTripDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="คำอธิบายทริป"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:minLines="3"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text" />
+
+        <!-- 📅 วันที่ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 วันที่เดินทาง"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="วันที่เริ่มต้น"
+            android:focusable="false"
+            android:clickable="true"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="วันที่สิ้นสุด"
+            android:focusable="false"
+            android:clickable="true"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginTop="8dp" />
+
+        <!-- 🚩 จุดเริ่มต้น/สิ้นสุด -->
+        <TextView
+            android:id="@+id/etStartLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="จุดเริ่มต้น: -"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#333333" />
+
+        <TextView
+            android:id="@+id/etEndLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="จุดสิ้นสุด: -"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#333333" />
+
+        <!-- 📏 ระยะทางและเวลา -->
+        <TextView
+            android:id="@+id/tvTotalDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ระยะทางรวม: -"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvTotalDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="เวลาโดยประมาณ: -"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <!-- 🔁 RecyclerView: แสดงแต่ละวัน -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDayOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:overScrollMode="never" />
+
+        <!-- ✅ ปุ่มพรีวิว -->
+        <Button
+            android:id="@+id/btnPreviewTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👀 พรีวิวทริป"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

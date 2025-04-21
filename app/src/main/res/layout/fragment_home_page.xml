@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- เนื้อหา Scroll ได้ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/homeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <!-- ปุ่ม Logout -->
+            <ImageButton
+                android:id="@+id/btnLogout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="top|start"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/circle_button_bg"
+                android:src="@drawable/ic_logout"
+                android:scaleType="centerInside"
+                android:contentDescription="Logout"
+                app:tint="@color/white" />
+
+            <!-- รูปโปรไฟล์ -->
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_user2"
+                android:layout_marginBottom="12dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/profile_circle_bg"
+                android:padding="8dp" />
+
+            <!-- ข้อความต้อนรับ -->
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="สวัสดี, ผู้ใช้งาน!"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"
+                android:shadowColor="#80000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4" />
+
+            <!-- Card ปุ่มดูทริปและการจอง -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#80FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <Button
+                        android:id="@+id/btnTrips"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="🌍 ดูทริปทั้งหมด"
+                        android:textSize="18sp"
+                        android:background="@drawable/rounded_button_green"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="#E0E0E0" />
+
+                    <Button
+                        android:id="@+id/btnMyBooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="📋 การจองของฉัน"
+                        android:textSize="18sp"
+                        android:background="@drawable/rounded_button_blue"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- หัวข้อ -->
+
+
+            <!-- ปุ่มแสดงเพิ่มเติม -->
+            <TextView
+                android:id="@+id/tvBookingInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="10dp"
+                android:maxLines="6"
+                android:text="รายละเอียดการจอง และข้อกำหนดของบริษัท\n\n🚐 ประเภทรถตู้\nรถตู้ธรรมดา\n - รองรับผู้โดยสาร 10–13 ที่นั่ง\n - ราคาเริ่มต้น 1,800 บาท/วัน\n\nรถตู้ VIP\n - รองรับผู้โดยสาร 5–9 ที่นั่ง\n - ราคาเริ่มต้น 2,000 บาท/วัน\n\n🛠 ประเภทการเช่ารถ\n✅ มีพนักงานขับรถ\n - มีคนขับคอยให้บริการ\n - เพิ่มค่าคนขับ 500 บาท/วัน\n - การใช้รถ เริ่มต้นเวลาใดก็ได้จนถึง 18:00 น.\n  หากใช้งานเกินเวลานี้ คิดค่าบริการ 50 บาท/ชั่วโมง\n\n⛽ ค่าใช้จ่ายเพิ่มเติม\n- คิดค่าเชื้อเพลิงแยกต่างหาก\n- ระบบจะคำนวณจากระยะทางที่ใช้จริง โดยอัตราค่าเดินทาง = ระยะทาง (กม.) × 3.5 บาท/กม.\n\n📎 หมายเหตุเพิ่มเติม\n- การจองจะใช้ข้อมูลจากทริปที่เลือก เช่น วันที่เริ่มเดินทาง ระยะทางทั้งหมด และจุดเริ่ม/สิ้นสุด\n- โปรดตรวจสอบข้อมูลก่อนยืนยันการจอง\n- เงื่อนไขอาจมีการเปลี่ยนแปลง หรือเพิ่มเติมในอนาคต"
+                android:textColor="#FFFFFF"
+                android:textIsSelectable="true"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btnToggleBookingInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="แสดงเพิ่มเติม ▼"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

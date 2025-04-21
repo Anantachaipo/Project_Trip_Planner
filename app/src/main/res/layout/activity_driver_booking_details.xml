@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 🔷 แถบด้านบน -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/blue_accent"
+            android:padding="20dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBackDriverDetail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_left_arrow"
+                android:contentDescription="ย้อนกลับ" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="รายละเอียดงานที่ได้รับ"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="60dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- 🔽 ข้อมูล booking -->
+        <TextView
+            android:id="@+id/tvTripTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚐 ชื่อทริป"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvBookingStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="สถานะ: -" />
+
+        <TextView
+            android:id="@+id/tvDateRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 วันที่เดินทาง" />
+
+        <TextView
+            android:id="@+id/tvStartPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🟢 จุดเริ่มต้น" />
+
+        <TextView
+            android:id="@+id/tvEndPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔴 จุดสิ้นสุด" />
+
+        <!-- 🔽 RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTripDayOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+        <!-- 🔽 ปุ่มดำเนินการ -->
+        <Button
+            android:id="@+id/btnAcceptJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✅ รับงาน"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/blue_accent"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnRejectJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="❌ ปฏิเสธงาน"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnMarkComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✅ เดินทางเสร็จสิ้น"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/green"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

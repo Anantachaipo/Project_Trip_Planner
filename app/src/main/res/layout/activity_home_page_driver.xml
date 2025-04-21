@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/blue_accent"
+        android:padding="20dp">
+
+        <ImageButton
+            android:id="@+id/btnBackDriver"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_logout"
+            android:scaleType="centerInside"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Logout"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvWelcomeDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👨‍✈️ ยินดีต้อนรับคนขับ"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Driver Rating Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_border_light_gray">
+
+        <TextView
+            android:id="@+id/tvRatingSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="คะแนนเฉลี่ย: -"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/driverRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:isIndicator="true"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tvTotalJobs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="งานที่เสร็จสิ้น: -"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Driver Status Button -->
+    <Button
+        android:id="@+id/btnToggleDriverStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="สถานะ: ว่าง"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/blue_accent"
+        android:textColor="@android:color/white" />
+
+    <!-- Assigned Jobs Button -->
+    <Button
+        android:id="@+id/btnViewAssignedJobs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ดูงานที่ได้รับ"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/blue_accent"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnCompletedJobs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="งานที่เสร็จสิ้น"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/blue_accent"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

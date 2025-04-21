@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cbAutoSortStops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เรียงจุดแวะให้อัตโนมัติ (ใกล้→ไกล)"
+            android:layout_marginTop="8dp"/>
+
+        <!-- ✅ Google Places Autocomplete Fragment -->
+        <fragment
+            android:id="@+id/autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDayStops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnClearAllStops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ลบจุดทั้งหมด"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvDayTotalDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ระยะทางรวม: -"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tvTotalTravelTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="เวลาเดินทางรวม: -"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvTotalRestTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="เวลาพักรวม: -"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

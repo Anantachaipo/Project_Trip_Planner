@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:elevation="2dp"
+    android:padding="12dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="8dp">
+
+    <!-- หัวข้อวัน -->
+    <TextView
+        android:id="@+id/tvDayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="วันที่ 1"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView แสดงจุดแวะของวันนั้น -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerStopsPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

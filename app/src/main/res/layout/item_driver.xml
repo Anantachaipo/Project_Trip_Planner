@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:elevation="4dp"
+    android:layout_marginBottom="12dp">
+
+    <TextView
+        android:id="@+id/tvDriverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ชื่อคนขับ"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#333333" />
+
+    <TextView
+        android:id="@+id/tvDriverEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="อีเมล"
+        android:textSize="14sp"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/tvDriverTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="เบอร์โทร"
+        android:textSize="14sp"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/tvDriverStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="สถานะ: ว่าง"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:layout_marginTop="4dp" />
+    <TextView
+        android:id="@+id/tvDriverRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⭐ คะแนนเฉลี่ย: -"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/tvCompletedJobs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📦 งานที่เสร็จสิ้น: -"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:layout_marginTop="2dp" />
+
+
+    <Button
+        android:id="@+id/btnAssignDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ส่งงานคนขับ"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#673AB7"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="16dp" />
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="พรีวิวทริป"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_centerInParent="true" />
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_left_arrow"
+                android:contentDescription="ย้อนกลับ" />
+        </RelativeLayout>
+
+        <!-- Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvPreviewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ชื่อทริป"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvPreviewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="คำอธิบายทริป"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvPreviewDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="จำนวนวัน: 0"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvPreviewStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="วันที่เริ่มเดินทาง: -"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvPreviewStartLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="จุดเริ่มต้น: -"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvPreviewTotalDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ระยะทางรวม: -"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvPreviewTotalDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="เวลารวม: -"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvPreviewStops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="จุดแวะทั้งหมด:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTripDayPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnConfirmTrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ยืนยันและบันทึก"
+                android:backgroundTint="@color/blue_accent"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
